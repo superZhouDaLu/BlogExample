@@ -22,6 +22,7 @@ export default {
     el.resizeListener = async() => {
       await doResize(el, binding, vnode)
     }
+    addResizeListener(el, el.resizeListener)
     addResizeListener(window.document.body, el.resizeListener)
   },
   async inserted(el, binding, vnode) {
