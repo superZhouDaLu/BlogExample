@@ -28,6 +28,9 @@ export default {
   async inserted(el, binding, vnode) {
     await doResize(el, binding, vnode)
   },
+  async componentUpdated(el, binding, vnode) {
+    await doResize(el, binding, vnode)
+  },
   unbind(el) {
     removeResizeListener(el, el.resizeListener)
   }
